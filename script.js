@@ -384,6 +384,24 @@ musicToggle.addEventListener("click", toggleMusic);
 envelope.addEventListener("click", openEnvelope);
 window.addEventListener("resize", resizeCanvas);
 
+// Birthday song custom timeline (0:17 - 2:44)
+
+if (bgMusic) {
+
+  bgMusic.addEventListener("loadedmetadata", () => {
+    bgMusic.currentTime = 17;
+  });
+
+
+  bgMusic.addEventListener("timeupdate", () => {
+    if (bgMusic.currentTime >= 164) {
+      bgMusic.currentTime = 17;
+      bgMusic.play();
+    }
+  });
+
+}
+
 buildDots();
 resizeCanvas();
 updateProgress();
