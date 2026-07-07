@@ -1169,60 +1169,61 @@ p {
 }
 
 
-/* different positions */
+/* Caption positions */
 
 .caption-top {
-  top: -55px;
-  left: 5px;
+  top: -48px;
+  left: 15px;
   transform: rotate(-18deg);
 }
 
-
 .caption-bottom {
-  bottom: -45px;
-  right: -20px;
-  transform: rotate(14deg);
+  bottom: -38px;
+  left: 20px;
+  transform: rotate(12deg);
 }
 
-
 .caption-side {
-  top: 20px;
-  right: -80px;
+  top: 40%;
+  right: -65px;
   transform: rotate(75deg);
 }
 
-
-/* curved arrow */
+/* Curved arrow */
 
 .photo-caption::after {
-  content: "↷";
+  content: "➜";
   position: absolute;
-  font-size: 4.5rem;
-  font-weight: 900;
+  font-size: 3.5rem;
   color: black;
-  font-family: 'Caveat', cursive;
-  line-height: 1;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+
+  text-shadow:
+    2px 2px white,
+    0 4px 8px rgba(0,0,0,.25);
 }
 
+/* Arrow positions */
 
 .caption-top::after {
-  right: -35px;
-  top: 25px;
-  transform: rotate(40deg);
+  right: -45px;
+  top: 15px;
+  transform: rotate(25deg);
 }
 
 
 .caption-bottom::after {
-  left: -35px;
-  bottom: 10px;
-  transform: rotate(190deg);
+  right: -45px;
+  bottom: 5px;
+  transform: rotate(40deg);
 }
 
 
 .caption-side::after {
-  left: -45px;
-  top: 10px;
-  transform: rotate(120deg);
+  left: -55px;
+  top: 20px;
+  transform: rotate(160deg);
 }
 
 /* Fix animations for caption photos */
@@ -1239,4 +1240,38 @@ p {
 .pinterest-grid .polaroid img {
   opacity: 1;
   transform: none;
+}
+/* Individual caption adjustments */
+
+/* p1_2 */
+.first-pic-text {
+  bottom: -25px;
+  right: 20px;
+  left: auto;
+}
+
+/* p3_2 */
+.expression-text {
+  bottom: -45px;
+  left: 25px;
+}
+
+/* p3_3 */
+.princess-text {
+  right: -95px;
+  top: 35%;
+}
+
+/* p5_2 */
+.my-kiss-text {
+  bottom: -50px;
+  right: 5px;
+  left: auto;
+}
+
+/* p6_2 */
+.sleepy-text {
+  top: -40px;
+  left: 10px;
+  transform: rotate(-15deg);
 }
