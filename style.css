@@ -1418,27 +1418,49 @@ p {
     right: -40px !important;
   }
 }
-/* S24 Ultra final layout cleanup */
+/* S24 Ultra final: laptop-like photos */
 
-@media (max-width: 520px) {
+@media (max-width:520px) {
 
-  .grid-five {
-    grid-template-columns: repeat(2, 1fr) !important;
-    column-gap: 18px !important;
-    row-gap: 32px !important;
+  .grid-three .polaroid img,
+  .grid-five .polaroid img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    aspect-ratio: auto !important;
+    object-position: center center !important;
   }
 
 
-  .grid-five .polaroid:first-child {
+  .grid-three .polaroid,
+  .grid-five .polaroid {
+    padding: 8px 8px 28px !important;
+  }
+
+
+  /* Growth page */
+  .grid-three {
+    grid-template-columns: repeat(2,1fr) !important;
+    gap: 22px !important;
+  }
+
+  .grid-three .polaroid:first-child {
     grid-column: span 2 !important;
-    width: 88% !important;
+    width: 85% !important;
     justify-self: center !important;
   }
 
 
-  .polaroid {
-    padding: 7px 7px 20px !important;
-    margin-bottom: 28px !important;
+  /* One Day Maybe page */
+  .grid-five {
+    grid-template-columns: repeat(2,1fr) !important;
+    gap: 22px !important;
+  }
+
+  .grid-five .polaroid:first-child {
+    grid-column: span 2 !important;
+    width: 85% !important;
+    justify-self: center !important;
   }
 
 
