@@ -1252,12 +1252,13 @@ p {
 
 /* p5_2 my kissss */
 .my-kiss-text {
-  top: -20px;
-  left: 20px;
+  top: 25px;
+  left: 25px;
   right: auto;
   bottom: auto;
   transform: rotate(-12deg);
 }
+
 
 /* p5_3 ufff sareee */
 .saree-text {
@@ -1270,11 +1271,11 @@ p {
 
 /* p5_5 cutieeee */
 .cutie-text {
-  bottom: -52px;
-  left: 30px;
+  bottom: -42px;
+  left: 35px;
   right: auto;
   top: auto;
-  transform: rotate(79deg);
+  transform: rotate(10deg);
 }
 
 /* p6_2 sleepy baby */
