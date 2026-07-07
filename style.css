@@ -1285,3 +1285,88 @@ p {
   right: auto;
   transform: rotate(-15deg);
 }
+/* MOBILE CAPTION FIX */
+
+.photo-caption {
+  z-index: 999 !important;
+}
+
+/* create room below every photo */
+.polaroid {
+  margin-bottom: 45px !important;
+}
+
+
+/* p1_2 first pic text - stop hiding under note */
+.first-pic-text {
+  bottom: -25px !important;
+  left: 35px !important;
+  top: auto !important;
+  transform: rotate(10deg) !important;
+}
+
+
+/* p5_2 My kissss - phone perfect */
+.my-kiss-text {
+  top: 35px !important;
+  bottom: auto !important;
+  left: 35px !important;
+  transform: rotate(-12deg) !important;
+}
+
+
+/* p5_5 cutieeee - under ear image */
+.cutie-text {
+  bottom: -30px !important;
+  left: 35px !important;
+  top: auto !important;
+  transform: rotate(10deg) !important;
+}
+
+
+/* S24 Ultra / large phones polish */
+
+@media (max-width: 520px) {
+
+  .photo-caption {
+    z-index: 999 !important;
+    font-size: 1.45rem !important;
+  }
+
+  .polaroid {
+    margin-bottom: 32px !important;
+  }
+
+  .pinterest-grid {
+    row-gap: 28px !important;
+  }
+
+
+  /* first pic */
+  .first-pic-text {
+    bottom: -22px !important;
+    left: 28px !important;
+    transform: rotate(10deg) !important;
+  }
+
+
+  /* kiss photo */
+  .my-kiss-text {
+    top: 30px !important;
+    left: 28px !important;
+    bottom: auto !important;
+    transform: rotate(-12deg) !important;
+  }
+
+
+  /* ear photo */
+  .cutie-text {
+    bottom: -25px !important;
+    left: 30px !important;
+    transform: rotate(10deg) !important;
+  }
+
+  .torn-note {
+    margin-top: 28px !important;
+  }
+}
