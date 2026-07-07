@@ -1156,74 +1156,103 @@ p {
 .photo-caption {
   position: absolute;
   font-family: 'Caveat', cursive;
-  font-size: clamp(1.2rem, 2vw, 2.1rem);
+  font-size: clamp(1.4rem, 2vw, 2.3rem);
   font-weight: 700;
   color: #c44f7d;
-  z-index: 20;
+  z-index: 50;
   white-space: nowrap;
   pointer-events: none;
 
   text-shadow:
-  2px 2px white,
-  0 4px 8px rgba(0,0,0,.15);
+    2px 2px #fff,
+    0 3px 6px rgba(0,0,0,.2);
 }
 
 
-/* Caption positions */
+/* ABOVE IMAGE TEXT */
 
 .caption-top {
-  top: -48px;
-  left: 15px;
-  transform: rotate(-18deg);
+  top: -75px;
+  left: 20px;
+  transform: rotate(-15deg);
 }
 
+.caption-top::after {
+  content: "⤵";
+  position: absolute;
+
+  right: -70px;
+  top: 10px;
+
+  font-family: "Comic Sans MS", cursive;
+  font-weight: 900;
+  font-size: 4rem;
+
+  color: black;
+
+  transform:
+    rotate(-20deg)
+    scaleX(1.4);
+
+  text-shadow: none;
+}
+
+
+/* BELOW IMAGE TEXT */
+
 .caption-bottom {
-  bottom: -38px;
-  left: 20px;
+  bottom: -75px;
+  left: 25px;
   transform: rotate(12deg);
 }
 
-.caption-side {
-  top: 40%;
-  right: -65px;
-  transform: rotate(75deg);
-}
-
-/* Curved arrow */
-
-.photo-caption::after {
-  content: "➜";
-  position: absolute;
-  font-size: 3.5rem;
-  color: black;
-  font-family: Arial, sans-serif;
-  font-weight: 900;
-
-  text-shadow:
-    2px 2px white,
-    0 4px 8px rgba(0,0,0,.25);
-}
-
-/* Arrow positions */
-
-.caption-top::after {
-  right: -45px;
-  top: 15px;
-  transform: rotate(25deg);
-}
-
-
 .caption-bottom::after {
-  right: -45px;
-  bottom: 5px;
-  transform: rotate(40deg);
+  content: "⤴";
+  position: absolute;
+
+  right: -65px;
+  bottom: 20px;
+
+  font-family: "Comic Sans MS", cursive;
+  font-weight: 900;
+  font-size: 4rem;
+  color: black;
+
+  transform:
+    rotate(15deg)
+    scaleX(1.4);
+
+  text-shadow: none;
 }
 
+
+
+/* SIDE TEXT */
+
+.caption-side {
+  top: 50px;
+  right: -130px;
+
+  transform: rotate(85deg);
+}
 
 .caption-side::after {
-  left: -55px;
-  top: 20px;
-  transform: rotate(160deg);
+  content: "⤺";
+  position: absolute;
+
+  left: -75px;
+  top: -20px;
+
+  font-family: "Comic Sans MS", cursive;
+  font-weight: 900;
+  font-size: 4rem;
+  color: black;
+
+  transform:
+    rotate(-40deg)
+    scaleX(1.4);
+
+  text-shadow: none;
 }
 
 /* Fix animations for caption photos */
