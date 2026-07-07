@@ -1146,3 +1146,74 @@ p {
     transition-duration: 1ms !important;
   }
 }
+/* Floating photo captions */
+
+.photo-caption {
+  position: absolute;
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.6rem, 3vw, 3rem);
+  font-weight: 700;
+  color: #b84b72;
+  z-index: 5;
+  pointer-events: none;
+  text-shadow:
+    2px 2px 0 white,
+    0 4px 10px rgba(0,0,0,0.15);
+}
+
+.polaroid {
+  position: relative;
+}
+
+.caption-top {
+  top: -45px;
+  left: 15px;
+  transform: rotate(-18deg);
+}
+
+.caption-bottom {
+  bottom: -45px;
+  right: 10px;
+  transform: rotate(15deg);
+}
+
+.caption-side {
+  top: 40%;
+  right: -80px;
+  transform: rotate(80deg);
+}
+
+/* Fix captions inside pinterest grids */
+
+.pinterest-grid .polaroid {
+  padding: 0;
+  border: 9px solid white;
+  border-radius: 7px;
+  overflow: visible;
+}
+
+.pinterest-grid .polaroid img {
+  border: 0;
+  border-radius: 3px;
+}
+
+
+/* More scrapbook feeling */
+
+.caption-top {
+  top: -55px;
+  left: 20px;
+  transform: rotate(-22deg);
+}
+
+.caption-bottom {
+  bottom: -55px;
+  right: 20px;
+  transform: rotate(18deg);
+}
+
+.caption-side {
+  top: 35%;
+  right: -100px;
+  transform: rotate(70deg);
+}
