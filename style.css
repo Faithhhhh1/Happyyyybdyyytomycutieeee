@@ -1146,74 +1146,97 @@ p {
     transition-duration: 1ms !important;
   }
 }
-/* Floating photo captions */
+/* Floating scrapbook captions */
+
+.polaroid {
+  position: relative;
+  overflow: visible !important;
+}
 
 .photo-caption {
   position: absolute;
   font-family: 'Caveat', cursive;
-  font-size: clamp(1.6rem, 3vw, 3rem);
+  font-size: clamp(1.2rem, 2vw, 2.1rem);
   font-weight: 700;
-  color: #b84b72;
-  z-index: 5;
+  color: #c44f7d;
+  z-index: 20;
+  white-space: nowrap;
   pointer-events: none;
+
   text-shadow:
-    2px 2px 0 white,
-    0 4px 10px rgba(0,0,0,0.15);
-}
-
-.polaroid {
-  position: relative;
-}
-
-.caption-top {
-  top: -45px;
-  left: 15px;
-  transform: rotate(-18deg);
-}
-
-.caption-bottom {
-  bottom: -45px;
-  right: 10px;
-  transform: rotate(15deg);
-}
-
-.caption-side {
-  top: 40%;
-  right: -80px;
-  transform: rotate(80deg);
-}
-
-/* Fix captions inside pinterest grids */
-
-.pinterest-grid .polaroid {
-  padding: 0;
-  border: 9px solid white;
-  border-radius: 7px;
-  overflow: visible;
-}
-
-.pinterest-grid .polaroid img {
-  border: 0;
-  border-radius: 3px;
+  2px 2px white,
+  0 4px 8px rgba(0,0,0,.15);
 }
 
 
-/* More scrapbook feeling */
+/* different positions */
 
 .caption-top {
   top: -55px;
-  left: 20px;
-  transform: rotate(-22deg);
+  left: 5px;
+  transform: rotate(-18deg);
 }
+
 
 .caption-bottom {
-  bottom: -55px;
-  right: 20px;
-  transform: rotate(18deg);
+  bottom: -45px;
+  right: -20px;
+  transform: rotate(14deg);
 }
 
+
 .caption-side {
-  top: 35%;
-  right: -100px;
-  transform: rotate(70deg);
+  top: 20px;
+  right: -80px;
+  transform: rotate(75deg);
+}
+
+
+/* curved arrow */
+
+.photo-caption::after {
+  content: "↷";
+  position: absolute;
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: black;
+  font-family: 'Caveat', cursive;
+  line-height: 1;
+}
+
+
+.caption-top::after {
+  right: -35px;
+  top: 25px;
+  transform: rotate(40deg);
+}
+
+
+.caption-bottom::after {
+  left: -35px;
+  bottom: 10px;
+  transform: rotate(190deg);
+}
+
+
+.caption-side::after {
+  left: -45px;
+  top: 10px;
+  transform: rotate(120deg);
+}
+
+/* Fix animations for caption photos */
+
+.pinterest-grid .polaroid {
+  opacity: 0;
+  transform: translateY(30px) rotate(-1deg) scale(0.96);
+}
+
+.pinterest-grid .polaroid.show {
+  animation: photoDrop 720ms cubic-bezier(0.2,0.8,0.2,1) both;
+}
+
+.pinterest-grid .polaroid img {
+  opacity: 1;
+  transform: none;
 }
