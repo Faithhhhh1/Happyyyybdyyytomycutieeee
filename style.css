@@ -1370,3 +1370,79 @@ p {
     margin-top: 28px !important;
   }
 }
+/* S24 Ultra final saree + caption adjustment */
+
+@media (max-width: 520px) {
+
+  /* saree images taller */
+  .grid-five .polaroid:nth-child(3) img,
+  .grid-five .polaroid:nth-child(4) img {
+    height: 230px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+
+
+  /* smile image */
+  .grid-five .polaroid:nth-child(1) img {
+    height: 240px !important;
+    object-position: center center !important;
+  }
+
+
+  /* kiss image */
+  .grid-five .polaroid:nth-child(2) img {
+    height: 180px !important;
+    object-position: center center !important;
+  }
+
+
+  /* ear image */
+  .grid-five .polaroid:nth-child(5) img {
+    height: 155px !important;
+    object-position: center center !important;
+  }
+
+
+  /* adjust captions after bigger photos */
+  .my-kiss-text {
+    top: 35px !important;
+    left: 25px !important;
+  }
+
+  .cutie-text {
+    bottom: -23px !important;
+  }
+
+  .saree-text {
+    right: -40px !important;
+  }
+}
+/* S24 Ultra final layout cleanup */
+
+@media (max-width: 520px) {
+
+  .grid-five {
+    grid-template-columns: repeat(2, 1fr) !important;
+    column-gap: 18px !important;
+    row-gap: 32px !important;
+  }
+
+
+  .grid-five .polaroid:first-child {
+    grid-column: span 2 !important;
+    width: 88% !important;
+    justify-self: center !important;
+  }
+
+
+  .polaroid {
+    padding: 7px 7px 20px !important;
+    margin-bottom: 28px !important;
+  }
+
+
+  .photo-caption {
+    font-size: 1.35rem !important;
+  }
+}
