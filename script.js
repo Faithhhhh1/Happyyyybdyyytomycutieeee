@@ -74,7 +74,8 @@ function fadeMusic(to, duration = 700) {
   function tick(now) {
     const progress = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);
-    bgMusic.volume = from + (to - from) * eased;
+    const volume = from + (to - from) * eased;
+    bgMusic.volume = Math.max(0, Math.min(1, volume));
     if (progress < 1) requestAnimationFrame(tick);
   }
 
@@ -384,7 +385,7 @@ musicToggle.addEventListener("click", toggleMusic);
 envelope.addEventListener("click", openEnvelope);
 window.addEventListener("resize", resizeCanvas);
 
-// Birthday song custom timeline (0:17 - 2:44)
+// Birthday song custom timeline (0:00 - 4:20)
 
 if (bgMusic) {
 
