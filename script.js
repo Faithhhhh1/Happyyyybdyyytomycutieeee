@@ -394,7 +394,7 @@ if (bgMusic) {
 
 
   bgMusic.addEventListener("timeupdate", () => {
-    if (bgMusic.currentTime >= 164) {
+    if (bgMusic.currentTime >= 260) {
       bgMusic.currentTime = 0;
       bgMusic.play();
     }
